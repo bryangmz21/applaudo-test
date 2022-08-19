@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "5622d80a-86bc-46c7-8d39-dc71ce5c3332",
+		"name": "Applaudo-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21229880"
+	},
+	"item": [
+		{
+			"name": "getItemById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/applaudo-challenge/app/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applaudo-challenge",
+						"app",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"itemId\":1, \r\n \"itemName\":\"item_x\", \r\n \"itemEnteredByUser\":\"user_x\", \r\n \"itemEnteredDate\":\"2020-05-10T13:00:41.499\", \r\n \"itemBuyingPrice\":50.0, \r\n \"itemSellingPrice\":55.0, \r\n \"itemLastModifiedDate\":\"2020-05-10T13:00:41.498\", \r\n \"itemLastModifiedByUser\":\"user_x\", \r\n \"itemStatus\":\"AVAILABLE\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/applaudo-challenge/app/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applaudo-challenge",
+						"app",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByStatusAndName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/applaudo-challenge/app/item?itemStatus=AVAILABLE&itemName=ITEM_X",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applaudo-challenge",
+						"app",
+						"item"
+					],
+					"query": [
+						{
+							"key": "itemStatus",
+							"value": "AVAILABLE"
+						},
+						{
+							"key": "itemName",
+							"value": "ITEM_X"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
